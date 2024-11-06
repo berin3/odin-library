@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        button {
+            background-color: #FA812F;
+            width: 130px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+        form p {
+            display: flex;
+        }
+        form p input {
+            flex: 2;
+        }
+        form p label {
+            flex-basis: 200px;
+        }
+
+    </style>
+</head>
+<body style="margin: 0; background-color: #FEF3E2">
+    <div style="height: 10vh; background-color: #FA4032; display: flex; justify-content: center; align-items: center;">
+        <h1>Library</h1>
+    </div>
+    <div id="display" style="display: flex; gap: 30px; display: grid; padding: 30px; grid-template-columns: repeat(5, 1fr);">
+
+    </div>
+    <button onclick="addBook()" style="margin-left: 30px;">New Book</button>
+    <dialog>
+        <p style="text-align: center; font-size: 1.5rem;">Add a new book:</p>
+        <form onsubmit="handleForm(event)" method="dialog" style="display: flex; flex-direction: column; width: 500px; gap: 20px;">
+            <p>
+                <label for="title">*Title:</label>
+                <input id="title" name="title" type="text" required autocomplete="off">
+            </p>
+            <p>
+                <label for="author">*Author:</label>
+                <input id="author" name="author" type="text" required autocomplete="off">
+            </p>
+            <p>
+                <label for="numPages">*Number Of Pages:</label>
+                <input id="numPages" name="numPages" type="text" required autocomplete="off">
+            </p>
+            <p>
+                <label for="read">*I Read The Book:</label>
+                <input style="flex: 0;" id="read" name="read" type="checkbox">
+            </p>
+            <button style="width: 100%;" type="submit">Add</button>
+        </form>
+        <button onclick="closeDialogue()" style="width: 100%; margin-top: 10px;">Close</button>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
