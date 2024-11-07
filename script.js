@@ -78,6 +78,7 @@ function handleForm(event) {
     let read = event.target[3].value;
     addBookToLibrary(title, author, numPages, read);
     displayLibrary();
+    closeDialogue();
 }
 
 addBookToLibrary("Ten", "SomeAuthor", 120, false);
